@@ -20,7 +20,6 @@ pipeline {
             steps {
                 sh 'pyinstaller --onefile /home/cloud_user/github/simple-python-pyinstaller-app/sources/add2vals.py'
             }
-            
             post {
                 success {
                     archiveArtifacts 'dist/add2vals'
