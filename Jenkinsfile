@@ -18,7 +18,7 @@ pipeline {
         }
          stage('Deliver') {
             steps {
-                sh 'pyinstaller --onefile /home/shanu/github/example/sources/add2vals.py'
+                sh 'pinstaller --onefile /home/shanu/github/example/sources/add2vals.py'
             }
             post {
                 success {
@@ -28,5 +28,3 @@ pipeline {
         }
     }
 }
-
-
