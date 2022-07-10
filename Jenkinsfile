@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'pytest-3 --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
+                sh 'pytest --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
             }
             post {
                 always {
@@ -16,8 +16,7 @@ pipeline {
                 }
             }
         }
-        
-        stage('Deliver') {
+         stage('Deliver') {
             steps {
                 sh 'pyinstaller --onefile /home/cloud_user/github/simple-python-pyinstaller-app/sources/add2vals.py'
             }
