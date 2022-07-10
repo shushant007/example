@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'pyinstaller --onefile /home/cloud_user/github/simple-python-pyinstaller-app/sources/add2vals.py'
+                bash 'pyinstaller --onefile /home/cloud_user/github/simple-python-pyinstaller-app/sources/add2vals.py'
             }
             post {
                 success {
