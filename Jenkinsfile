@@ -25,11 +25,6 @@ pipeline {
                     archiveArtifacts 'dist/add2vals'
                 }
             }
-        }
-         stage('Deploy') {
-            steps {                 
-                sh 'scp -r /var/lib/jenkins/workspace/add2values/dist cloud_user@9e2c2aef731c.mylabserver.com:/var/tmp'
-            }
-        }   
+        }  
     }
 }
