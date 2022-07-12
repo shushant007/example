@@ -26,10 +26,5 @@ pipeline {
                 }
             }
         }
-        stage('deploy') {
-            steps {
-                sh 'scp -r /var/lib/jenkins/workspace/python_project/dist/ cloud_user@9e2c2aef731c.mylabserver.com://home/cloud_user/shushant'
-            }
-        }
     }
 }
